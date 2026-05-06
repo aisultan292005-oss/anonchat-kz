@@ -1,0 +1,923 @@
+2026-05-06 02:41:43 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 02:41:44 [INFO] __main__: Database ready
+2026-05-06 02:41:44 [INFO] __main__: Bot polling started
+2026-05-06 02:41:44 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 02:41:48 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 02:42:57 [INFO] aiogram.event: Update id=289367096 is handled. Duration 438 ms by bot id=8790733640
+2026-05-06 02:43:01 [INFO] aiogram.event: Update id=289367097 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 02:43:06 [INFO] aiogram.event: Update id=289367098 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 02:43:10 [INFO] handlers.registration: User 8053950670 registered: gender=Gender.male age=20
+2026-05-06 02:43:10 [INFO] aiogram.event: Update id=289367099 is handled. Duration 311 ms by bot id=8790733640
+2026-05-06 02:43:31 [INFO] aiogram.event: Update id=289367100 is handled. Duration 344 ms by bot id=8790733640
+2026-05-06 02:43:31 [INFO] aiogram.event: Update id=289367101 is handled. Duration 313 ms by bot id=8790733640
+2026-05-06 02:43:34 [INFO] aiogram.event: Update id=289367102 is handled. Duration 108 ms by bot id=8790733640
+2026-05-06 02:43:37 [INFO] aiogram.event: Update id=289367103 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 02:43:39 [INFO] handlers.registration: User 6840380156 registered: gender=Gender.male age=20
+2026-05-06 02:43:39 [INFO] aiogram.event: Update id=289367104 is handled. Duration 233 ms by bot id=8790733640
+2026-05-06 02:43:41 [INFO] aiogram.event: Update id=289367105 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 02:43:50 [INFO] handlers.chat: Matched 8053950670 <-> 6840380156 (session 1)
+2026-05-06 02:43:50 [INFO] aiogram.event: Update id=289367106 is handled. Duration 280 ms by bot id=8790733640
+2026-05-06 02:43:55 [INFO] aiogram.event: Update id=289367107 is handled. Duration 157 ms by bot id=8790733640
+2026-05-06 02:44:03 [INFO] aiogram.event: Update id=289367108 is not handled. Duration 16 ms by bot id=8790733640
+2026-05-06 02:44:18 [INFO] aiogram.event: Update id=289367109 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 02:44:38 [INFO] aiogram.event: Update id=289367110 is handled. Duration 327 ms by bot id=8790733640
+2026-05-06 02:44:54 [INFO] aiogram.event: Update id=289367111 is handled. Duration 344 ms by bot id=8790733640
+2026-05-06 02:45:13 [INFO] aiogram.event: Update id=289367112 is handled. Duration 436 ms by bot id=8790733640
+2026-05-06 02:45:15 [INFO] aiogram.event: Update id=289367113 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 02:45:24 [INFO] aiogram.event: Update id=289367114 is handled. Duration 282 ms by bot id=8790733640
+2026-05-06 02:45:30 [INFO] aiogram.event: Update id=289367115 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 02:45:38 [INFO] aiogram.event: Update id=289367116 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 02:52:33 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-06 02:52:33 [INFO] __main__: Bot stopped
+2026-05-06 02:52:33 [INFO] aiogram.dispatcher: Polling stopped for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:09:55 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:09:55 [INFO] __main__: Database ready
+2026-05-06 03:09:55 [INFO] __main__: Bot polling started
+2026-05-06 03:09:55 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:09:56 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:10:45 [INFO] aiogram.event: Update id=289367117 is not handled. Duration 94 ms by bot id=8790733640
+2026-05-06 03:10:45 [ERROR] aiogram.event: Cause exception while process update id=289367117 by bot id=8790733640
+ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.total_messages не существует
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.gender AS users_gender, users.age AS users_age, users.is_registered AS users_is_registered, users.is_banned AS users_is_banned, users.is_premium AS users_is_premium, users.premium_until AS users_premium_until, users.reputation AS users_reputation, users.total_chats AS users_total_chats, users.total_messages AS users_total_messages, users.created_at AS users_created_at, users.last_active AS users_last_active, users.pref_gender AS users_pref_gender, users.pref_age_min AS users_pref_age_min, users.pref_age_max AS users_pref_age_max, users.interests AS users_interests, users.preferred_room AS users_preferred_room, users.language AS users_language, users.city AS users_city, users.captcha_passed AS users_captcha_passed, users.last_partner_id AS users_last_partner_id 
+FROM users 
+WHERE users.id = $1::BIGINT]
+[parameters: (8053950670,)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 510, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 756, in _prepare
+    prepared_stmt = await self._connection.prepare(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 635, in prepare
+    return await self._prepare(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 653, in _prepare
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец users.total_messages не существует
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.total_messages не существует
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\middlewares\__init__.py", line 67, in __call__
+    user = await repo.get_user(event.from_user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\database\repo.py", line 30, in get_user
+    return await s.get(User, user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 604, in get
+    return await greenlet_spawn(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3693, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.total_messages не существует
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.gender AS users_gender, users.age AS users_age, users.is_registered AS users_is_registered, users.is_banned AS users_is_banned, users.is_premium AS users_is_premium, users.premium_until AS users_premium_until, users.reputation AS users_reputation, users.total_chats AS users_total_chats, users.total_messages AS users_total_messages, users.created_at AS users_created_at, users.last_active AS users_last_active, users.pref_gender AS users_pref_gender, users.pref_age_min AS users_pref_age_min, users.pref_age_max AS users_pref_age_max, users.interests AS users_interests, users.preferred_room AS users_preferred_room, users.language AS users_language, users.city AS users_city, users.captcha_passed AS users_captcha_passed, users.last_partner_id AS users_last_partner_id 
+FROM users 
+WHERE users.id = $1::BIGINT]
+[parameters: (8053950670,)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-06 03:13:11 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:13:11 [INFO] __main__: Database ready
+2026-05-06 03:13:11 [INFO] __main__: Bot polling started
+2026-05-06 03:13:11 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:13:11 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:13:11 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:11 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8790733640)
+2026-05-06 03:13:16 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:16 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8790733640)
+2026-05-06 03:13:17 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:17 [WARNING] aiogram.dispatcher: Sleep for 1.394236 seconds and try again... (tryings = 1, bot id = 8790733640)
+2026-05-06 03:13:21 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:21 [WARNING] aiogram.dispatcher: Sleep for 1.323056 seconds and try again... (tryings = 1, bot id = 8790733640)
+2026-05-06 03:13:23 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:23 [WARNING] aiogram.dispatcher: Sleep for 1.913385 seconds and try again... (tryings = 2, bot id = 8790733640)
+2026-05-06 03:13:28 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:28 [WARNING] aiogram.dispatcher: Sleep for 1.959070 seconds and try again... (tryings = 2, bot id = 8790733640)
+2026-05-06 03:13:30 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:30 [WARNING] aiogram.dispatcher: Sleep for 2.418259 seconds and try again... (tryings = 3, bot id = 8790733640)
+2026-05-06 03:13:35 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:35 [WARNING] aiogram.dispatcher: Sleep for 2.385323 seconds and try again... (tryings = 3, bot id = 8790733640)
+2026-05-06 03:13:38 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:38 [WARNING] aiogram.dispatcher: Sleep for 3.074792 seconds and try again... (tryings = 4, bot id = 8790733640)
+2026-05-06 03:13:41 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:41 [WARNING] aiogram.dispatcher: Sleep for 3.018351 seconds and try again... (tryings = 4, bot id = 8790733640)
+2026-05-06 03:13:44 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:44 [WARNING] aiogram.dispatcher: Sleep for 3.896355 seconds and try again... (tryings = 5, bot id = 8790733640)
+2026-05-06 03:13:48 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:48 [WARNING] aiogram.dispatcher: Sleep for 4.023434 seconds and try again... (tryings = 5, bot id = 8790733640)
+2026-05-06 03:13:52 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:52 [WARNING] aiogram.dispatcher: Sleep for 5.091236 seconds and try again... (tryings = 6, bot id = 8790733640)
+2026-05-06 03:13:58 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-05-06 03:13:58 [WARNING] aiogram.dispatcher: Sleep for 4.946472 seconds and try again... (tryings = 6, bot id = 8790733640)
+2026-05-06 03:14:17 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:14:18 [INFO] __main__: Database ready
+2026-05-06 03:14:18 [INFO] __main__: Bot polling started
+2026-05-06 03:14:18 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:14:18 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:14:42 [INFO] aiogram.event: Update id=289367118 is handled. Duration 671 ms by bot id=8790733640
+2026-05-06 03:14:50 [INFO] aiogram.event: Update id=289367119 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 03:14:54 [INFO] aiogram.event: Update id=289367120 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:14:57 [INFO] aiogram.event: Update id=289367121 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 03:15:00 [INFO] aiogram.event: Update id=289367122 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:15:08 [INFO] aiogram.event: Update id=289367123 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:15:19 [INFO] handlers.chat: Matched 6840380156 <-> 8053950670 (session 2)
+2026-05-06 03:15:19 [INFO] aiogram.event: Update id=289367124 is handled. Duration 360 ms by bot id=8790733640
+2026-05-06 03:15:27 [INFO] aiogram.event: Update id=289367125 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 03:16:09 [INFO] aiogram.event: Update id=289367126 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 03:16:24 [INFO] handlers.chat: Matched 6840380156 <-> 8053950670 (session 3)
+2026-05-06 03:16:24 [INFO] aiogram.event: Update id=289367127 is handled. Duration 578 ms by bot id=8790733640
+2026-05-06 03:16:40 [INFO] aiogram.event: Update id=289367128 is handled. Duration 483 ms by bot id=8790733640
+2026-05-06 03:16:42 [INFO] aiogram.event: Update id=289367129 is handled. Duration 157 ms by bot id=8790733640
+2026-05-06 03:18:55 [INFO] aiogram.event: Update id=289367131 is handled. Duration 311 ms by bot id=8790733640
+2026-05-06 03:18:55 [INFO] handlers.chat: Matched 6840380156 <-> 8053950670 (session 4)
+2026-05-06 03:18:55 [INFO] aiogram.event: Update id=289367130 is handled. Duration 516 ms by bot id=8790733640
+2026-05-06 03:19:01 [INFO] aiogram.event: Update id=289367132 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 03:19:08 [INFO] aiogram.event: Update id=289367133 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 03:19:27 [INFO] aiogram.event: Update id=289367134 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 03:19:33 [INFO] aiogram.event: Update id=289367135 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 03:19:35 [INFO] aiogram.event: Update id=289367136 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 03:20:27 [INFO] aiogram.event: Update id=289367137 is handled. Duration 438 ms by bot id=8790733640
+2026-05-06 03:20:34 [INFO] aiogram.event: Update id=289367138 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 03:20:44 [INFO] aiogram.event: Update id=289367139 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 03:20:49 [INFO] aiogram.event: Update id=289367140 is handled. Duration 157 ms by bot id=8790733640
+2026-05-06 03:20:50 [INFO] aiogram.event: Update id=289367141 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 03:20:55 [INFO] aiogram.event: Update id=289367142 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:21:02 [INFO] aiogram.event: Update id=289367143 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:21:20 [INFO] handlers.chat: Matched 8053950670 <-> 6840380156 (session 5)
+2026-05-06 03:21:20 [INFO] aiogram.event: Update id=289367144 is handled. Duration 469 ms by bot id=8790733640
+2026-05-06 03:21:30 [INFO] aiogram.event: Update id=289367145 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 03:21:39 [INFO] aiogram.event: Update id=289367146 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 03:21:43 [INFO] aiogram.event: Update id=289367147 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:30:25 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:30:26 [INFO] __main__: Database ready
+2026-05-06 03:30:26 [INFO] __main__: Bot polling started
+2026-05-06 03:30:26 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:30:26 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:30:27 [INFO] aiogram.event: Update id=289367148 is handled. Duration 452 ms by bot id=8790733640
+2026-05-06 03:30:27 [INFO] aiogram.event: Update id=289367149 is handled. Duration 500 ms by bot id=8790733640
+2026-05-06 03:30:42 [INFO] handlers.captcha: Captcha passed: 6163951464
+2026-05-06 03:30:42 [INFO] aiogram.event: Update id=289367150 is not handled. Duration 171 ms by bot id=8790733640
+2026-05-06 03:30:42 [ERROR] aiogram.event: Cause exception while process update id=289367150 by bot id=8790733640
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\handlers\captcha.py", line 65, in cb_captcha
+    from handlers.registration import start_registration
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+2026-05-06 03:30:56 [INFO] aiogram.event: Update id=289367151 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 03:31:40 [INFO] aiogram.event: Update id=289367152 is handled. Duration 311 ms by bot id=8790733640
+2026-05-06 03:31:43 [INFO] aiogram.event: Update id=289367153 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:31:52 [INFO] aiogram.event: Update id=289367154 is handled. Duration 108 ms by bot id=8790733640
+2026-05-06 03:31:55 [INFO] aiogram.event: Update id=289367155 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 03:31:57 [INFO] aiogram.event: Update id=289367156 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 03:32:02 [INFO] aiogram.event: Update id=289367157 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:32:03 [INFO] aiogram.event: Update id=289367158 is handled. Duration 108 ms by bot id=8790733640
+2026-05-06 03:32:05 [INFO] aiogram.event: Update id=289367159 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:32:06 [INFO] aiogram.event: Update id=289367160 is handled. Duration 94 ms by bot id=8790733640
+2026-05-06 03:32:07 [INFO] aiogram.event: Update id=289367161 is handled. Duration 110 ms by bot id=8790733640
+2026-05-06 03:32:10 [INFO] handlers.registration: User 6163951464 registered city=Астана
+2026-05-06 03:32:10 [INFO] aiogram.event: Update id=289367162 is handled. Duration 280 ms by bot id=8790733640
+2026-05-06 03:32:14 [INFO] aiogram.event: Update id=289367163 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:32:20 [INFO] handlers.chat: Matched 8053950670 <-> 6163951464 (session 6)
+2026-05-06 03:32:20 [INFO] aiogram.event: Update id=289367164 is handled. Duration 342 ms by bot id=8790733640
+2026-05-06 03:32:25 [INFO] aiogram.event: Update id=289367165 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 03:32:31 [INFO] aiogram.event: Update id=289367166 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 03:32:50 [INFO] aiogram.event: Update id=289367167 is handled. Duration 344 ms by bot id=8790733640
+2026-05-06 03:33:11 [INFO] aiogram.event: Update id=289367168 is handled. Duration 359 ms by bot id=8790733640
+2026-05-06 03:33:25 [INFO] aiogram.event: Update id=289367169 is handled. Duration 157 ms by bot id=8790733640
+2026-05-06 03:33:28 [INFO] handlers.reports: Report #1: 8053950670 -> 6163951464 (🤬 Оскорбления)
+2026-05-06 03:33:28 [INFO] aiogram.event: Update id=289367170 is handled. Duration 296 ms by bot id=8790733640
+2026-05-06 03:33:43 [INFO] aiogram.event: Update id=289367171 is handled. Duration 264 ms by bot id=8790733640
+2026-05-06 03:33:53 [INFO] aiogram.event: Update id=289367172 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 03:34:17 [INFO] handlers.chat: Matched 8053950670 <-> 6163951464 (session 7)
+2026-05-06 03:34:17 [INFO] aiogram.event: Update id=289367173 is handled. Duration 483 ms by bot id=8790733640
+2026-05-06 03:34:33 [INFO] aiogram.event: Update id=289367174 is handled. Duration 358 ms by bot id=8790733640
+2026-05-06 03:34:41 [INFO] aiogram.event: Update id=289367175 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:34:54 [INFO] aiogram.event: Update id=289367176 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 03:35:32 [INFO] aiogram.event: Update id=289367177 is handled. Duration 469 ms by bot id=8790733640
+2026-05-06 03:35:38 [INFO] aiogram.event: Update id=289367178 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:35:41 [INFO] aiogram.event: Update id=289367179 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:35:46 [INFO] aiogram.event: Update id=289367180 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:35:49 [INFO] aiogram.event: Update id=289367181 is handled. Duration 311 ms by bot id=8790733640
+2026-05-06 03:35:52 [INFO] aiogram.event: Update id=289367182 is handled. Duration 250 ms by bot id=8790733640
+2026-05-06 03:35:54 [INFO] aiogram.event: Update id=289367183 is handled. Duration 234 ms by bot id=8790733640
+2026-05-06 03:48:44 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-06 03:48:44 [INFO] __main__: Bot stopped
+2026-05-06 03:48:44 [INFO] aiogram.dispatcher: Polling stopped for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:50:46 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:50:47 [INFO] __main__: Database ready
+2026-05-06 03:50:47 [INFO] __main__: Bot polling started
+2026-05-06 03:50:47 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:50:47 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:51:01 [INFO] aiogram.event: Update id=289367184 is not handled. Duration 63 ms by bot id=8790733640
+2026-05-06 03:51:01 [ERROR] aiogram.event: Cause exception while process update id=289367184 by bot id=8790733640
+ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.phone_verified не существует
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.gender AS users_gender, users.age AS users_age, users.is_registered AS users_is_registered, users.is_banned AS users_is_banned, users.is_premium AS users_is_premium, users.premium_until AS users_premium_until, users.reputation AS users_reputation, users.total_chats AS users_total_chats, users.total_messages AS users_total_messages, users.created_at AS users_created_at, users.last_active AS users_last_active, users.pref_gender AS users_pref_gender, users.pref_age_min AS users_pref_age_min, users.pref_age_max AS users_pref_age_max, users.interests AS users_interests, users.preferred_room AS users_preferred_room, users.language AS users_language, users.city AS users_city, users.captcha_passed AS users_captcha_passed, users.phone_verified AS users_phone_verified, users.phone AS users_phone, users.last_partner_id AS users_last_partner_id, users.referred_by AS users_referred_by, users.referral_count AS users_referral_count 
+FROM users 
+WHERE users.id = $1::BIGINT]
+[parameters: (8053950670,)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 510, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 756, in _prepare
+    prepared_stmt = await self._connection.prepare(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 635, in prepare
+    return await self._prepare(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 653, in _prepare
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\asyncpg\connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedColumnError: столбец users.phone_verified не существует
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.phone_verified не существует
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\middlewares\__init__.py", line 98, in __call__
+    user = await repo.get_user(event.from_user.id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\database\repo.py", line 30, in get_user
+    return await s.get(User, user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 604, in get
+    return await greenlet_spawn(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3693, in get
+    return self._get_impl(
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 3873, in _get_impl
+    return db_load_fn(
+           ^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\loading.py", line 694, in load_on_pk_identity
+    session.execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedColumnError'>: столбец users.phone_verified не существует
+[SQL: SELECT users.id AS users_id, users.username AS users_username, users.gender AS users_gender, users.age AS users_age, users.is_registered AS users_is_registered, users.is_banned AS users_is_banned, users.is_premium AS users_is_premium, users.premium_until AS users_premium_until, users.reputation AS users_reputation, users.total_chats AS users_total_chats, users.total_messages AS users_total_messages, users.created_at AS users_created_at, users.last_active AS users_last_active, users.pref_gender AS users_pref_gender, users.pref_age_min AS users_pref_age_min, users.pref_age_max AS users_pref_age_max, users.interests AS users_interests, users.preferred_room AS users_preferred_room, users.language AS users_language, users.city AS users_city, users.captcha_passed AS users_captcha_passed, users.phone_verified AS users_phone_verified, users.phone AS users_phone, users.last_partner_id AS users_last_partner_id, users.referred_by AS users_referred_by, users.referral_count AS users_referral_count 
+FROM users 
+WHERE users.id = $1::BIGINT]
+[parameters: (8053950670,)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-05-06 03:52:32 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 03:52:32 [INFO] __main__: Database ready
+2026-05-06 03:52:32 [INFO] __main__: Bot polling started
+2026-05-06 03:52:32 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 03:52:32 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 03:52:43 [INFO] aiogram.event: Update id=289367185 is handled. Duration 469 ms by bot id=8790733640
+2026-05-06 03:52:45 [INFO] aiogram.event: Update id=289367186 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 03:52:50 [INFO] aiogram.event: Update id=289367187 is handled. Duration 280 ms by bot id=8790733640
+2026-05-06 03:53:19 [INFO] aiogram.event: Update id=289367188 is handled. Duration 344 ms by bot id=8790733640
+2026-05-06 03:53:23 [INFO] aiogram.event: Update id=289367189 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:54:21 [INFO] aiogram.event: Update id=289367190 is handled. Duration 547 ms by bot id=8790733640
+2026-05-06 03:54:22 [INFO] handlers.chat: Matched 8053950670 <-> 6840380156 (session 8)
+2026-05-06 03:54:22 [INFO] aiogram.event: Update id=289367191 is handled. Duration 328 ms by bot id=8790733640
+2026-05-06 03:54:31 [INFO] aiogram.event: Update id=289367192 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 03:54:48 [INFO] aiogram.event: Update id=289367193 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 03:54:59 [INFO] aiogram.event: Update id=289367194 is handled. Duration 546 ms by bot id=8790733640
+2026-05-06 03:55:12 [INFO] handlers.rating: Rating: 6840380156 -> 8053950670: like
+2026-05-06 03:55:12 [INFO] aiogram.event: Update id=289367195 is handled. Duration 344 ms by bot id=8790733640
+2026-05-06 03:55:27 [INFO] aiogram.event: Update id=289367196 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 03:55:28 [INFO] aiogram.event: Update id=289367197 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 03:55:35 [INFO] aiogram.event: Update id=289367198 is handled. Duration 250 ms by bot id=8790733640
+2026-05-06 03:55:47 [INFO] aiogram.event: Update id=289367199 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 04:54:57 [INFO] aiogram.event: Update id=289367200 is handled. Duration 718 ms by bot id=8790733640
+2026-05-06 04:55:02 [INFO] handlers.captcha: Captcha passed: 5468061670
+2026-05-06 04:55:02 [INFO] aiogram.event: Update id=289367201 is not handled. Duration 171 ms by bot id=8790733640
+2026-05-06 04:55:02 [ERROR] aiogram.event: Cause exception while process update id=289367201 by bot id=8790733640
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\handlers\captcha.py", line 65, in cb_captcha
+    from handlers.registration import start_registration
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+2026-05-06 04:55:33 [INFO] aiogram.event: Update id=289367202 is handled. Duration 343 ms by bot id=8790733640
+2026-05-06 04:55:37 [INFO] aiogram.event: Update id=289367203 is handled. Duration 109 ms by bot id=8790733640
+2026-05-06 04:56:11 [INFO] aiogram.event: Update id=289367204 is handled. Duration 311 ms by bot id=8790733640
+2026-05-06 04:56:14 [INFO] aiogram.event: Update id=289367205 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 04:56:33 [INFO] aiogram.event: Update id=289367206 is handled. Duration 327 ms by bot id=8790733640
+2026-05-06 04:56:39 [INFO] aiogram.event: Update id=289367207 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 04:56:44 [INFO] aiogram.event: Update id=289367208 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 04:56:46 [INFO] handlers.registration: User 5468061670 registered city=Талдыкорган
+2026-05-06 04:56:46 [INFO] aiogram.event: Update id=289367209 is handled. Duration 297 ms by bot id=8790733640
+2026-05-06 04:56:54 [INFO] aiogram.event: Update id=289367210 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 04:57:06 [INFO] handlers.rooms: User 5468061670 joined room: юмор
+2026-05-06 04:57:06 [INFO] aiogram.event: Update id=289367211 is handled. Duration 218 ms by bot id=8790733640
+2026-05-06 04:57:20 [INFO] handlers.rooms: User 5468061670 joined room: алматы
+2026-05-06 04:57:20 [INFO] aiogram.event: Update id=289367212 is handled. Duration 327 ms by bot id=8790733640
+2026-05-06 04:57:22 [INFO] aiogram.event: Update id=289367213 is handled. Duration 281 ms by bot id=8790733640
+2026-05-06 04:57:44 [INFO] aiogram.event: Update id=289367214 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 06:12:32 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-05-06 06:12:32 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8790733640)
+2026-05-06 06:12:33 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [getaddrinfo failed]
+2026-05-06 06:12:33 [WARNING] aiogram.dispatcher: Sleep for 1.436001 seconds and try again... (tryings = 1, bot id = 8790733640)
+2026-05-06 06:12:34 [INFO] aiogram.dispatcher: Connection established (tryings = 2, bot id = 8790733640)
+2026-05-06 06:12:35 [INFO] handlers.chat: Matched 8053950670 <-> 6840380156 (session 9)
+2026-05-06 06:12:35 [INFO] aiogram.event: Update id=289367215 is handled. Duration 530 ms by bot id=8790733640
+2026-05-06 12:46:10 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - Request timeout error
+2026-05-06 12:46:10 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8790733640)
+2026-05-06 12:46:11 [INFO] middlewares: Inactivity disconnect: 6840380156 <-> 8053950670
+2026-05-06 12:46:12 [INFO] aiogram.dispatcher: Connection established (tryings = 1, bot id = 8790733640)
+2026-05-06 12:46:12 [INFO] aiogram.event: Update id=289367216 is handled. Duration 359 ms by bot id=8790733640
+2026-05-06 12:49:36 [INFO] aiogram.event: Update id=289367217 is handled. Duration 358 ms by bot id=8790733640
+2026-05-06 12:57:32 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-06 12:57:32 [ERROR] aiogram.dispatcher: Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [Errno 1] [SSL: APPLICATION_DATA_AFTER_CLOSE_NOTIFY] application data after close notify (_ssl.c:2706)
+2026-05-06 12:57:32 [WARNING] aiogram.dispatcher: Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 8790733640)
+2026-05-06 12:57:32 [INFO] __main__: Bot stopped
+2026-05-06 12:57:32 [INFO] aiogram.dispatcher: Polling stopped for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:03:38 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 13:03:39 [INFO] __main__: Database ready
+2026-05-06 13:03:39 [INFO] __main__: Bot polling started
+2026-05-06 13:03:39 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 13:03:39 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:03:56 [INFO] aiogram.event: Update id=289367218 is handled. Duration 625 ms by bot id=8790733640
+2026-05-06 13:04:04 [INFO] aiogram.event: Update id=289367219 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 13:04:10 [INFO] aiogram.event: Update id=289367220 is handled. Duration 233 ms by bot id=8790733640
+2026-05-06 13:04:13 [INFO] aiogram.event: Update id=289367221 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:04:22 [INFO] aiogram.event: Update id=289367222 is handled. Duration 156 ms by bot id=8790733640
+2026-05-06 13:04:31 [INFO] aiogram.event: Update id=289367223 is handled. Duration 156 ms by bot id=8790733640
+2026-05-06 13:04:43 [INFO] aiogram.event: Update id=289367224 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:04:45 [INFO] aiogram.event: Update id=289367225 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:04:53 [INFO] aiogram.event: Update id=289367226 is handled. Duration 250 ms by bot id=8790733640
+2026-05-06 13:04:57 [INFO] aiogram.event: Update id=289367227 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:05:05 [INFO] aiogram.event: Update id=289367228 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:05:15 [INFO] handlers.broadcast: Broadcast by admin 8053950670: sent=3 failed=0
+2026-05-06 13:05:15 [INFO] aiogram.event: Update id=289367229 is handled. Duration 750 ms by bot id=8790733640
+2026-05-06 13:06:15 [INFO] aiogram.event: Update id=289367230 is handled. Duration 358 ms by bot id=8790733640
+2026-05-06 13:06:17 [INFO] aiogram.event: Update id=289367231 is handled. Duration 202 ms by bot id=8790733640
+2026-05-06 13:06:19 [INFO] aiogram.event: Update id=289367232 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:06:20 [INFO] aiogram.event: Update id=289367233 is handled. Duration 218 ms by bot id=8790733640
+2026-05-06 13:06:22 [INFO] aiogram.event: Update id=289367234 is handled. Duration 109 ms by bot id=8790733640
+2026-05-06 13:06:22 [INFO] aiogram.event: Update id=289367235 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:06:23 [INFO] aiogram.event: Update id=289367236 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:06:27 [INFO] aiogram.event: Update id=289367237 is handled. Duration 343 ms by bot id=8790733640
+2026-05-06 13:06:28 [INFO] aiogram.event: Update id=289367238 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 13:07:56 [INFO] aiogram.event: Update id=289367239 is handled. Duration 421 ms by bot id=8790733640
+2026-05-06 13:08:01 [INFO] handlers.captcha: Captcha passed: 1579323913
+2026-05-06 13:08:01 [INFO] aiogram.event: Update id=289367240 is not handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:08:01 [ERROR] aiogram.event: Cause exception while process update id=289367240 by bot id=8790733640
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+Traceback (most recent call last):
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\premium_anon_bot\handlers\captcha.py", line 65, in cb_captcha
+    from handlers.registration import start_registration
+ImportError: cannot import name 'start_registration' from 'handlers.registration' (C:\premium_anon_bot\handlers\registration.py)
+2026-05-06 13:08:25 [INFO] aiogram.event: Update id=289367241 is handled. Duration 391 ms by bot id=8790733640
+2026-05-06 13:08:32 [INFO] aiogram.event: Update id=289367242 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:09:06 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 13:09:06 [INFO] __main__: Database ready
+2026-05-06 13:09:06 [INFO] __main__: Bot polling started
+2026-05-06 13:09:06 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 13:09:07 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:09:07 [INFO] aiogram.event: Update id=289367243 is handled. Duration 593 ms by bot id=8790733640
+2026-05-06 13:09:08 [WARNING] middlewares: Spam detected from user 1579323913
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367250 is handled. Duration 796 ms by bot id=8790733640
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367246 is handled. Duration 796 ms by bot id=8790733640
+2026-05-06 13:09:08 [WARNING] middlewares: Spam detected from user 1579323913
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367244 is handled. Duration 828 ms by bot id=8790733640
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367252 is handled. Duration 843 ms by bot id=8790733640
+2026-05-06 13:09:08 [WARNING] middlewares: Spam detected from user 1579323913
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367253 is handled. Duration 875 ms by bot id=8790733640
+2026-05-06 13:09:08 [WARNING] middlewares: Spam detected from user 1579323913
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367249 is handled. Duration 890 ms by bot id=8790733640
+2026-05-06 13:09:08 [WARNING] middlewares: Spam detected from user 1579323913
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367248 is handled. Duration 906 ms by bot id=8790733640
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367247 is handled. Duration 937 ms by bot id=8790733640
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367251 is handled. Duration 985 ms by bot id=8790733640
+2026-05-06 13:09:08 [INFO] aiogram.event: Update id=289367245 is handled. Duration 1093 ms by bot id=8790733640
+2026-05-06 13:09:17 [INFO] aiogram.event: Update id=289367254 is handled. Duration 156 ms by bot id=8790733640
+2026-05-06 13:09:23 [INFO] aiogram.event: Update id=289367255 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:09:28 [INFO] aiogram.event: Update id=289367256 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:09:32 [INFO] aiogram.event: Update id=289367257 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:09:34 [INFO] aiogram.event: Update id=289367258 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 13:09:36 [INFO] aiogram.event: Update id=289367259 is handled. Duration 218 ms by bot id=8790733640
+2026-05-06 13:09:37 [INFO] aiogram.event: Update id=289367260 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 13:09:42 [INFO] aiogram.event: Update id=289367261 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 13:09:42 [INFO] aiogram.event: Update id=289367262 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 13:09:43 [INFO] aiogram.event: Update id=289367263 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:09:44 [INFO] aiogram.event: Update id=289367264 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:09:45 [INFO] aiogram.event: Update id=289367265 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 13:09:45 [INFO] aiogram.event: Update id=289367266 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:09:48 [INFO] aiogram.event: Update id=289367267 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:09:49 [INFO] aiogram.event: Update id=289367268 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 13:09:50 [INFO] handlers.registration: User 1579323913 registered city=Астана
+2026-05-06 13:09:50 [INFO] aiogram.event: Update id=289367269 is handled. Duration 281 ms by bot id=8790733640
+2026-05-06 13:09:55 [INFO] aiogram.event: Update id=289367270 is handled. Duration 156 ms by bot id=8790733640
+2026-05-06 13:09:59 [INFO] aiogram.event: Update id=289367271 is handled. Duration 155 ms by bot id=8790733640
+2026-05-06 13:10:01 [INFO] handlers.broadcast: Broadcast by admin 8053950670: sent=4 failed=0
+2026-05-06 13:10:01 [INFO] aiogram.event: Update id=289367272 is handled. Duration 875 ms by bot id=8790733640
+2026-05-06 13:10:08 [INFO] handlers.chat: Matched 8053950670 <-> 1579323913 (session 10)
+2026-05-06 13:10:08 [INFO] aiogram.event: Update id=289367273 is handled. Duration 343 ms by bot id=8790733640
+2026-05-06 13:10:14 [INFO] aiogram.event: Update id=289367274 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:10:24 [INFO] aiogram.event: Update id=289367275 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:10:28 [INFO] aiogram.event: Update id=289367276 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:10:35 [INFO] aiogram.event: Update id=289367277 is handled. Duration 172 ms by bot id=8790733640
+2026-05-06 13:10:42 [INFO] aiogram.event: Update id=289367278 is handled. Duration 186 ms by bot id=8790733640
+2026-05-06 13:10:58 [INFO] aiogram.event: Update id=289367279 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 13:11:07 [INFO] aiogram.event: Update id=289367280 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:11:26 [INFO] aiogram.event: Update id=289367281 is handled. Duration 390 ms by bot id=8790733640
+2026-05-06 13:11:39 [INFO] aiogram.event: Update id=289367282 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 13:12:09 [INFO] aiogram.event: Update id=289367283 is handled. Duration 405 ms by bot id=8790733640
+2026-05-06 13:12:22 [INFO] aiogram.event: Update id=289367284 is handled. Duration 140 ms by bot id=8790733640
+2026-05-06 13:12:22 [INFO] aiogram.event: Update id=289367285 is handled. Duration 202 ms by bot id=8790733640
+2026-05-06 13:12:29 [INFO] aiogram.event: Update id=289367286 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 13:12:34 [INFO] aiogram.event: Update id=289367287 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:12:38 [INFO] aiogram.event: Update id=289367288 is handled. Duration 250 ms by bot id=8790733640
+2026-05-06 13:12:43 [INFO] aiogram.event: Update id=289367289 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 13:13:07 [INFO] aiogram.event: Update id=289367290 is handled. Duration 406 ms by bot id=8790733640
+2026-05-06 13:13:14 [INFO] aiogram.event: Update id=289367291 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:15:03 [INFO] aiogram.event: Update id=289367292 is handled. Duration 453 ms by bot id=8790733640
+2026-05-06 13:15:22 [INFO] aiogram.event: Update id=289367293 is handled. Duration 391 ms by bot id=8790733640
+2026-05-06 13:15:42 [INFO] aiogram.event: Update id=289367294 is handled. Duration 483 ms by bot id=8790733640
+2026-05-06 13:15:51 [INFO] aiogram.event: Update id=289367295 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:15:57 [INFO] aiogram.event: Update id=289367296 is handled. Duration 187 ms by bot id=8790733640
+2026-05-06 13:17:41 [INFO] aiogram.event: Update id=289367297 is handled. Duration 438 ms by bot id=8790733640
+2026-05-06 13:22:41 [INFO] middlewares: Inactivity disconnect: 8053950670 <-> 1579323913
+2026-05-06 13:34:55 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-06 13:34:55 [INFO] __main__: Bot stopped
+2026-05-06 13:34:55 [INFO] aiogram.dispatcher: Polling stopped for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:35:36 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 13:35:36 [INFO] __main__: Database ready
+2026-05-06 13:35:36 [INFO] __main__: Bot polling started
+2026-05-06 13:35:36 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 13:35:37 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:35:49 [INFO] aiogram.event: Update id=289367298 is handled. Duration 531 ms by bot id=8790733640
+2026-05-06 13:35:50 [INFO] aiogram.event: Update id=289367299 is handled. Duration 218 ms by bot id=8790733640
+2026-05-06 13:35:54 [INFO] aiogram.event: Update id=289367300 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:35:58 [INFO] aiogram.event: Update id=289367301 is handled. Duration 250 ms by bot id=8790733640
+2026-05-06 13:36:10 [INFO] aiogram.event: Update id=289367302 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:36:17 [INFO] aiogram.event: Update id=289367303 is handled. Duration 171 ms by bot id=8790733640
+2026-05-06 13:36:22 [INFO] handlers.chat: Matched 6840380156 <-> 8053950670 (session 11)
+2026-05-06 13:36:22 [INFO] aiogram.event: Update id=289367304 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 13:36:26 [INFO] aiogram.event: Update id=289367305 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:37:26 [INFO] aiogram.event: Update id=289367306 is handled. Duration 687 ms by bot id=8790733640
+2026-05-06 13:37:34 [INFO] aiogram.event: Update id=289367307 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:37:42 [INFO] aiogram.event: Update id=289367308 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:37:46 [INFO] handlers.chat: Matched 1579323913 <-> 8053950670 (session 12)
+2026-05-06 13:37:46 [INFO] aiogram.event: Update id=289367309 is handled. Duration 328 ms by bot id=8790733640
+2026-05-06 13:37:48 [INFO] aiogram.event: Update id=289367310 is handled. Duration 141 ms by bot id=8790733640
+2026-05-06 13:37:49 [INFO] handlers.calls: Call request: 8053950670 -> 1579323913 (video)
+2026-05-06 13:37:49 [INFO] aiogram.event: Update id=289367311 is handled. Duration 328 ms by bot id=8790733640
+2026-05-06 13:37:52 [INFO] handlers.calls: Call accepted: 8053950670 <-> 1579323913 room=AnonChatKZ_w3l46SJRMJ
+2026-05-06 13:37:52 [INFO] aiogram.event: Update id=289367312 is handled. Duration 328 ms by bot id=8790733640
+2026-05-06 13:38:56 [INFO] aiogram.event: Update id=289367313 is handled. Duration 484 ms by bot id=8790733640
+2026-05-06 13:39:02 [INFO] aiogram.event: Update id=289367314 is handled. Duration 203 ms by bot id=8790733640
+2026-05-06 13:39:15 [INFO] aiogram.event: Update id=289367315 is handled. Duration 187 ms by bot id=8790733640
+2026-05-06 13:39:16 [INFO] aiogram.event: Update id=289367316 is handled. Duration 188 ms by bot id=8790733640
+2026-05-06 13:39:19 [INFO] aiogram.event: Update id=289367317 is handled. Duration 421 ms by bot id=8790733640
+2026-05-06 13:39:21 [INFO] handlers.calls: Call request: 8053950670 -> 1579323913 (video)
+2026-05-06 13:39:21 [INFO] aiogram.event: Update id=289367318 is handled. Duration 264 ms by bot id=8790733640
+2026-05-06 13:39:27 [INFO] handlers.calls: Call accepted: 8053950670 <-> 1579323913 room=AnonChatKZ_akA9fpc4dy
+2026-05-06 13:39:27 [INFO] aiogram.event: Update id=289367319 is handled. Duration 281 ms by bot id=8790733640
+2026-05-06 13:43:10 [INFO] aiogram.event: Update id=289367320 is handled. Duration 750 ms by bot id=8790733640
+2026-05-06 13:43:12 [INFO] handlers.rating: Rating: 8053950670 -> 1579323913: like
+2026-05-06 13:43:12 [INFO] aiogram.event: Update id=289367321 is handled. Duration 280 ms by bot id=8790733640
+2026-05-06 13:43:16 [INFO] aiogram.event: Update id=289367322 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:43:51 [INFO] handlers.rating: Rating: 6840380156 -> 8053950670: like
+2026-05-06 13:43:51 [INFO] aiogram.event: Update id=289367323 is handled. Duration 577 ms by bot id=8790733640
+2026-05-06 13:44:23 [INFO] aiogram.event: Update id=289367324 is handled. Duration 703 ms by bot id=8790733640
+2026-05-06 13:50:28 [INFO] aiogram.event: Update id=289367325 is handled. Duration 46 ms by bot id=8790733640
+2026-05-06 13:50:32 [INFO] aiogram.event: Update id=289367326 is handled. Duration 405 ms by bot id=8790733640
+2026-05-06 13:50:34 [INFO] aiogram.event: Update id=289367327 is handled. Duration 139 ms by bot id=8790733640
+2026-05-06 13:52:02 [INFO] __main__: Starting AnonChat Bot...
+2026-05-06 13:52:02 [INFO] __main__: Database ready
+2026-05-06 13:52:02 [INFO] __main__: Bot polling started
+2026-05-06 13:52:02 [INFO] aiogram.dispatcher: Start polling
+2026-05-06 13:52:03 [INFO] aiogram.dispatcher: Run polling for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'
+2026-05-06 13:52:39 [INFO] aiogram.event: Update id=289367328 is handled. Duration 936 ms by bot id=8790733640
+2026-05-06 13:52:47 [INFO] aiogram.event: Update id=289367329 is handled. Duration 375 ms by bot id=8790733640
+2026-05-06 13:52:49 [INFO] aiogram.event: Update id=289367330 is handled. Duration 125 ms by bot id=8790733640
+2026-05-06 13:53:50 [INFO] handlers.rating: Rating: 1579323913 -> 8053950670: like
+2026-05-06 13:53:50 [INFO] aiogram.event: Update id=289367331 is handled. Duration 561 ms by bot id=8790733640
+2026-05-06 14:10:04 [INFO] aiogram.dispatcher: Polling stopped
+2026-05-06 14:10:05 [INFO] __main__: Bot stopped
+2026-05-06 14:10:05 [INFO] aiogram.dispatcher: Polling stopped for bot @anonbyais_bot id=8790733640 - 'Анончат🇰🇿'

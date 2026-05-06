@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AnonChat KZ — Мониторинг</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#0d0d1a;color:#e8e8f0;font-family:'Segoe UI',sans-serif;min-height:100vh}
+  .header{background:#13132a;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(99,179,237,.15);position:sticky;top:0;z-index:100}
+  .logo{font-size:18px;font-weight:700;color:#63b3ed}.logo span{color:#ffd700}
+  .dot{width:8px;height:8px;background:#48bb78;border-radius:50%;display:inline-block;margin-right:6px;animation:pulse 2s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+  .live{font-size:12px;color:#48bb78;display:flex;align-items:center}
+  .container{max-width:1400px;margin:0 auto;padding:20px}
+  .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+  .sc{background:#1a1a2e;border:1px solid rgba(99,179,237,.12);border-radius:12px;padding:16px}
+  .sc-icon{font-size:22px;margin-bottom:8px}.sc-val{font-size:26px;font-weight:700;color:#fff}
+  .sc-label{font-size:11px;color:#7f8da0;text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+  .tabs{display:flex;gap:4px;margin-bottom:16px}
+  .tab{padding:8px 18px;border-radius:8px;font-size:13px;cursor:pointer;border:1px solid rgba(99,179,237,.15);color:#7f8da0;background:transparent;transition:all .2s}
+  .tab.active{background:rgba(99,179,237,.15);color:#63b3ed;border-color:rgba(99,179,237,.3)}
+  .main{display:grid;grid-template-columns:1fr 360px;gap:16px}
+  .panel{background:#1a1a2e;border:1px solid rgba(99,179,237,.12);border-radius:12px;overflow:hidden}
+  .ph{padding:14px 18px;border-bottom:1px solid rgba(99,179,237,.08);display:flex;align-items:center;justify-content:space-between}
+  .pt{font-size:14px;font-weight:600;color:#e2e8f0}
+  .pb{background:rgba(99,179,237,.12);color:#63b3ed;font-size:11px;padding:2px 8px;border-radius:20px;font-weight:600}
+  .list{max-height:480px;overflow-y:auto}
+  .list::-webkit-scrollbar{width:3px}.list::-webkit-scrollbar-thumb{background:#2d3748;border-radius:2px}
+  .row{padding:12px 18px;border-bottom:1px solid rgba(255,255,255,.03);cursor:pointer;transition:background .15s}
+  .row:hover{background:rgba(99,179,237,.05)}
+  .row.sel{background:rgba(99,179,237,.1);border-left:2px solid #63b3ed}
+  .row-top{display:flex;align-items:center;gap:8px;margin-bottom:5px}
+  .av{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+  .av.male{background:rgba(99,179,237,.15)}.av.female{background:rgba(246,173,195,.15)}
+  .ui{flex:1;min-width:0}.un{font-size:13px;font-weight:500;color:#e2e8f0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .uc{font-size:11px;color:#7f8da0}
+  .ct{font-size:11px;color:#4a5568}
+  .lm{font-size:12px;color:#718096;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .sid{font-size:10px;color:#4a5568;margin-top:2px}
+  .live-badge{font-size:10px;background:rgba(72,187,120,.15);color:#48bb78;padding:1px 6px;border-radius:10px;border:1px solid rgba(72,187,120,.2)}
+  .ended-badge{font-size:10px;background:rgba(255,255,255,.05);color:#4a5568;padding:1px 6px;border-radius:10px}
+  .mv{display:flex;flex-direction:column;height:560px}
+  .mh{padding:14px 18px;border-bottom:1px solid rgba(99,179,237,.08)}
+  .mi{font-size:12px;color:#a0aec0}.mi b{color:#e2e8f0}
+  .msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:6px}
+  .msgs::-webkit-scrollbar{width:3px}.msgs::-webkit-scrollbar-thumb{background:#2d3748;border-radius:2px}
+  .mb{max-width:88%;padding:8px 11px;border-radius:10px;font-size:13px;line-height:1.5}
+  .mb.a{background:rgba(99,179,237,.12);border:1px solid rgba(99,179,237,.18);align-self:flex-start}
+  .mb.b{background:rgba(159,122,234,.12);border:1px solid rgba(159,122,234,.18);align-self:flex-end}
+  .mm{font-size:10px;color:#4a5568;margin-top:2px}
+  .empty{color:#4a5568;font-size:13px;text-align:center;margin:auto;padding:30px}
+  .qlist{padding:10px;display:flex;flex-direction:column;gap:6px;max-height:160px;overflow-y:auto}
+  .qi{background:rgba(255,215,0,.05);border:1px solid rgba(255,215,0,.12);border-radius:8px;padding:10px 12px;font-size:12px;display:flex;align-items:center;gap:8px}
+  .qn{color:#e2e8f0;font-weight:500}.qs{color:#7f8da0;font-size:11px}
+  .rbtn{background:rgba(99,179,237,.08);border:1px solid rgba(99,179,237,.2);color:#63b3ed;padding:5px 12px;border-radius:7px;font-size:12px;cursor:pointer}
+  .rbtn:hover{background:rgba(99,179,237,.15)}
+  @media(max-width:900px){.main{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="header">
+  <div class="logo">🕵️ AnonChat <span>KZ</span></div>
+  <div style="display:flex;align-items:center;gap:12px">
+    <div class="live"><span class="dot"></span>Онлайн</div>
+    <button class="rbtn" onclick="loadAll()">🔄 Обновить</button>
+  </div>
+</div>
+
+<div class="container">
+  <div class="stats">
+    <div class="sc"><div class="sc-icon">👥</div><div class="sc-val" id="s-users">—</div><div class="sc-label">Пользователей</div></div>
+    <div class="sc"><div class="sc-icon">💬</div><div class="sc-val" id="s-chats">—</div><div class="sc-label">Активных чатов</div></div>
+    <div class="sc"><div class="sc-icon">🔍</div><div class="sc-val" id="s-queue">—</div><div class="sc-label">В очереди</div></div>
+    <div class="sc"><div class="sc-icon">⭐</div><div class="sc-val" id="s-premium">—</div><div class="sc-label">Premium</div></div>
+    <div class="sc"><div class="sc-icon">📨</div><div class="sc-val" id="s-sessions">—</div><div class="sc-label">Всего сессий</div></div>
+    <div class="sc"><div class="sc-icon">📋</div><div class="sc-val" id="s-reports">—</div><div class="sc-label">Жалоб</div></div>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('active')">💬 Активные сессии</button>
+    <button class="tab" onclick="switchTab('all')">📋 Все сессии</button>
+    <button class="tab" onclick="switchTab('queue')">🔍 Очередь</button>
+  </div>
+
+  <div class="main">
+    <div>
+      <div class="panel">
+        <div class="ph"><span class="pt" id="list-title">Сессии</span><span class="pb" id="list-count">0</span></div>
+        <div class="list" id="chatList"><div class="empty">⏳ Загрузка...</div></div>
+      </div>
+    </div>
+
+    <div class="panel mv">
+      <div class="ph"><span class="pt">📩 Переписка</span></div>
+      <div class="mh" id="msgHeader"><div class="mi">Выберите сессию</div></div>
+      <div class="msgs" id="messages"><div class="empty">👈 Кликните на сессию</div></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let selSession = null;
+let curTab = 'active';
+
+function switchTab(tab) {
+  curTab = tab;
+  document.querySelectorAll('.tab').forEach((t,i) => {
+    t.classList.toggle('active', ['active','all','queue'][i] === tab);
+  });
+  loadAll();
+}
+
+function ago(iso) {
+  if (!iso) return '';
+  const d = Math.floor((Date.now() - new Date(iso)) / 1000);
+  if (d < 60) return `${d}с`;
+  if (d < 3600) return `${Math.floor(d/60)}м`;
+  if (d < 86400) return `${Math.floor(d/3600)}ч`;
+  return new Date(iso).toLocaleDateString('ru');
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+async function loadAll() {
+  try {
+    const r = await fetch('/api/stats');
+    const d = await r.json();
+    document.getElementById('s-users').textContent = d.total_users??'—';
+    document.getElementById('s-chats').textContent = d.active_chats??'—';
+    document.getElementById('s-queue').textContent = d.in_queue??'—';
+    document.getElementById('s-premium').textContent = d.premium??'—';
+    document.getElementById('s-sessions').textContent = d.total_sessions??'—';
+    document.getElementById('s-reports').textContent = d.open_reports??'—';
+
+    if (curTab === 'active') await loadSessions('/api/active-chats', 'Активные сессии');
+    else if (curTab === 'all') await loadSessions('/api/all-sessions', 'Все сессии');
+    else await loadQueue();
+
+    if (selSession) await loadMessages(selSession);
+  } catch(e) { console.error(e); }
+}
+
+async function loadSessions(url, title) {
+  const r = await fetch(url);
+  const sessions = await r.json();
+  document.getElementById('list-title').textContent = title;
+  document.getElementById('list-count').textContent = sessions.length;
+  const list = document.getElementById('chatList');
+
+  if (!sessions.length) {
+    list.innerHTML = '<div class="empty">Нет данных</div>';
+    return;
+  }
+
+  list.innerHTML = sessions.map(c => `
+    <div class="row ${selSession===c.session_id?'sel':''}" onclick="selectSession(${c.session_id},'${esc(c.user_a_info)}','${esc(c.user_b_info)}')">
+      <div class="row-top">
+        <div class="av ${c.gender_a}">${c.gender_a==='male'?'👨':'👩'}</div>
+        <div class="ui">
+          <div class="un">${esc(c.user_a_info)} ${c.city_a?'· '+esc(c.city_a):''}</div>
+        </div>
+        <span style="color:#4a5568;font-size:16px">⇄</span>
+        <div class="ui">
+          <div class="un">${esc(c.user_b_info)} ${c.city_b?'· '+esc(c.city_b):''}</div>
+        </div>
+        <div>${c.is_live?'<span class="live-badge">live</span>':'<span class="ended-badge">завершён</span>'}</div>
+        <div class="ct">${ago(c.started_at)}</div>
+      </div>
+      <div class="lm">${esc(c.last_message||'— нет сообщений —')}</div>
+      <div class="sid">Сессия #${c.session_id}</div>
+    </div>
+  `).join('');
+}
+
+async function loadQueue() {
+  const r = await fetch('/api/queue');
+  const q = await r.json();
+  document.getElementById('list-title').textContent = 'Очередь поиска';
+  document.getElementById('list-count').textContent = q.length;
+  const list = document.getElementById('chatList');
+  if (!q.length) { list.innerHTML = '<div class="empty">Очередь пуста</div>'; return; }
+  list.innerHTML = `<div class="qlist">${q.map(u=>`
+    <div class="qi">
+      <span style="font-size:18px">${u.gender==='male'?'👨':'👩'}</span>
+      <div><div class="qn">${esc(u.info)}</div><div class="qs">📍 ${esc(u.city||'город не указан')}</div></div>
+    </div>`).join('')}</div>`;
+}
+
+async function selectSession(id, infoA, infoB) {
+  selSession = id;
+  document.getElementById('msgHeader').innerHTML =
+    `<div class="mi"><b>Сессия #${id}</b><br>${esc(infoA)} ⇄ ${esc(infoB)}</div>`;
+  await loadMessages(id);
+  loadAll();
+}
+
+async function loadMessages(id) {
+  const r = await fetch('/api/messages/'+id);
+  const msgs = await r.json();
+  const c = document.getElementById('messages');
+  if (!msgs.length) { c.innerHTML='<div class="empty">Нет сохранённых сообщений</div>'; return; }
+  c.innerHTML = msgs.map(m=>`
+    <div>
+      <div class="mb ${m.side}">
+        ${esc(m.content)}
+        <div class="mm">${ago(m.sent_at)} · ID ${m.sender_id}</div>
+      </div>
+    </div>`).join('');
+  c.scrollTop = c.scrollHeight;
+}
+
+loadAll();
+setInterval(loadAll, 8000);
+</script>
+</body>
+</html>
